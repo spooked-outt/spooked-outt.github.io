@@ -44,6 +44,7 @@
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
             font-size: 14px;
+            z-index: 1000;
         }
         .bottom-left-box a {
             display: block;
@@ -58,7 +59,7 @@
         <title></title>
     </head>
     <body>
-        <div id="map">
+        <div id="map" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content"></div>
