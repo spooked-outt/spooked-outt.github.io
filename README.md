@@ -33,14 +33,26 @@
             background-color: rgba(255,255,255,.4) !important;
             padding: 2px !important;
         } 
-        </style>
-
-        <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
+        
+        /* Box styling */
+        .bottom-left-box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+        }
+        .bottom-left-box a {
+            display: block;
+            color: #007BFF;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .bottom-left-box a:hover {
+            text-decoration: underline;
         }
         </style>
         <title></title>
@@ -52,13 +64,25 @@
                 <div id="popup-content"></div>
             </div>
         </div>
+        
+        <!-- Bottom-left box with links -->
+        <div class="bottom-left-box">
+            <a href="https://example.com/link1" target="_blank">Link 1</a>
+            <a href="https://example.com/link2" target="_blank">Link 2</a>
+            <a href="https://example.com/link3" target="_blank">Link 3</a>
+        </div>
+        
         <script src="resources/qgis2web_expressions.js"></script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
         <script src="./resources/ol-layerswitcher.js"></script>
         <script src="resources/ol-geocoder.js"></script>
-        <script src="layers/WaterwayRivers_1.js"></script><script src="layers/IrisanBounds_2.js"></script><script src="layers/POIs_3.js"></script>
-        <script src="styles/WaterwayRivers_1_style.js"></script><script src="styles/IrisanBounds_2_style.js"></script><script src="styles/POIs_3_style.js"></script>
+        <script src="layers/WaterwayRivers_1.js"></script>
+        <script src="layers/IrisanBounds_2.js"></script>
+        <script src="layers/POIs_3.js"></script>
+        <script src="styles/WaterwayRivers_1_style.js"></script>
+        <script src="styles/IrisanBounds_2_style.js"></script>
+        <script src="styles/POIs_3_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>
