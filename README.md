@@ -14,6 +14,11 @@
         <style>
         html, body {
             background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
         .ol-control > * {
             background-color: #f8f8f8!important;
@@ -34,17 +39,18 @@
             padding: 2px !important;
         } 
         
-        /* Box styling */
-        .bottom-left-box {
-            position: absolute;
+        /* Bottom-left controls container */
+        #bottom-left-container {
+            position: fixed;
             bottom: 20px;
             left: 20px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 10px;
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
             font-size: 14px;
-            z-index: 1000;
+            z-index: 9999;
+            pointer-events: auto;
         }
         .bottom-left-box a {
             display: block;
@@ -66,11 +72,13 @@
             </div>
         </div>
         
-        <!-- Bottom-left box with links -->
-        <div class="bottom-left-box">
-            <a href="https://example.com/link1" target="_blank">Link 1</a>
-            <a href="https://example.com/link2" target="_blank">Link 2</a>
-            <a href="https://example.com/link3" target="_blank">Link 3</a>
+        <!-- Bottom-left container with links -->
+        <div id="bottom-left-container">
+            <div class="bottom-left-box">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
         </div>
         
         <script src="resources/qgis2web_expressions.js"></script>
